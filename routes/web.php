@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::get('/', function () {
 Route::resource('products', ProductController::class)->except([
     'show'
 ]);
+
+Route::resource('blog', BlogController::class);
